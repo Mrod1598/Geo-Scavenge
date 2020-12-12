@@ -61,7 +61,7 @@ function App(props) {
       
       //proxy url
       const proxyurl = "https://cors-anywhere.herokuapp.com/"
-      let url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=e&inputtype=textquery&fields=geometry,formatted_address,name&locationbias=circle:' + radius + '@'+ lat + ',' + lng + '&key=AIzaSyAW1DRLXGAoITDvAMST32CkAh5xwN8VuIM'
+      let url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=e&inputtype=textquery&fields=geometry,formatted_address,name&locationbias=circle:' + radius + '@'+ lat + ',' + lng + '&key=API_Key'
       
       let grabPlace = await fetch(proxyurl + url)
       .then(response => response.json())
@@ -70,7 +70,7 @@ function App(props) {
       {
         lat = currentLoc.lat + getOffset(gameSize)
         lng = currentLoc.lng + getOffset(gameSize)
-        let url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=e&inputtype=textquery&fields=geometry,formatted_address,name&locationbias=circle:' + radius + '@'+ lat + ',' + lng + '&key=AIzaSyAW1DRLXGAoITDvAMST32CkAh5xwN8VuIM'
+        let url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=e&inputtype=textquery&fields=geometry,formatted_address,name&locationbias=circle:' + radius + '@'+ lat + ',' + lng + '&key=API_Key'
         grabPlace = await fetch(proxyurl + url)
         .then(response => response.json())
       }
@@ -79,7 +79,7 @@ function App(props) {
       {
         lat = currentLoc.lat + getOffset(gameSize)
         lng = currentLoc.lng + getOffset(gameSize)
-        let url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=e&inputtype=textquery&fields=geometry,formatted_address,name&locationbias=circle:' + radius + '@'+ lat + ',' + lng + '&key=AIzaSyAW1DRLXGAoITDvAMST32CkAh5xwN8VuIM'
+        let url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=e&inputtype=textquery&fields=geometry,formatted_address,name&locationbias=circle:' + radius + '@'+ lat + ',' + lng + '&key=API_Key'
         grabPlace = await fetch(proxyurl + url)
         .then(response => response.json())
         if(grabPlace.status !== "ZERO_RESULTS")
@@ -90,7 +90,7 @@ function App(props) {
       addresses.push(currentAddress)
       tempLatLngs.push({lat: grabPlace.candidates[0].geometry.location.lat,lng: grabPlace.candidates[0].geometry.location.lng})
 
-      let imgSrc =  "https://maps.googleapis.com/maps/api/streetview?soource=outdoor&location="+ grabPlace.candidates[0].geometry.location.lat + "," + grabPlace.candidates[0].geometry.location.lng + "&size=300x300&key=AIzaSyAW1DRLXGAoITDvAMST32CkAh5xwN8VuIM"
+      let imgSrc =  "https://maps.googleapis.com/maps/api/streetview?soource=outdoor&location="+ grabPlace.candidates[0].geometry.location.lat + "," + grabPlace.candidates[0].geometry.location.lng + "&size=300x300&key=API_Key"
       tempInfo.push(
         <InfoWindow
           class="infoBox"

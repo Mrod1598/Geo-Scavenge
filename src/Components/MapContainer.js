@@ -128,7 +128,7 @@ function MapContainer(props)
   return (
     <div>
       <LoadScript
-        googleMapsApiKey="AIzaSyAW1DRLXGAoITDvAMST32CkAh5xwN8VuIM"
+        googleMapsApiKey="API_Key"
       >
         <GoogleMap
           //THIS IS WHERE YOU STYLLLLLEEEE

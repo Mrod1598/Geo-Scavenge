@@ -9,6 +9,15 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+
+**Note: node.js is needed to run**
+
+**https://nodejs.org/en/**
+
+**Note: React is needed as well**
+
+**https://reactjs.org/**
+
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
@@ -28,6 +37,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
+
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
